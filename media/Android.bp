@@ -27,3 +27,9 @@ prebuilt_etc {
     src: "media_codecs_performance_kona.xml",
     vendor: true,
 }
+
+prebuilt_etc {
+    name: "video_system_specs.json",
+    src: "video_system_specs.json",
+    vendor: true,
+}
