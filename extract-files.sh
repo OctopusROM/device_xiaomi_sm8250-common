@@ -78,6 +78,10 @@ function blob_fixup() {
             [ "$2" = "" ] && return 0
             sed -i "/seclabel u:r:mi_thermald:s0/d" "${2}"
             ;;
+        vendor/etc/init/vendor.xiaomi.hardware.citsensorservice@1.1-service.rc)
+            [ "$2" = "" ] && return 0
+            sed -i 's/input/& wakelock/' "${2}"
+            ;;
         vendor/lib64/libril-qc-hal-qmi.so)
             [ "$2" = "" ] && return 0
             sed -i 's|ro.product.vendor.device|ro.vendor.radio.midevice|g' "${2}"
