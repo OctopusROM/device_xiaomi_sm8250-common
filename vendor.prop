@@ -191,6 +191,7 @@ debug.egl.hw=0
 debug.mdpcomp.logs=0
 debug.sf.auto_latch_unsignaled=1
 debug.sf.disable_client_composition_cache=1
+debug.sf.enable_adpf_cpu_hint=true
 debug.sf.enable_advanced_sf_phase_offset=1
 debug.sf.enable_gl_backpressure=1
 debug.sf.enable_transaction_tracing=false
@@ -209,6 +210,9 @@ vendor.gralloc.disable_ubwc=0
 # HVDCP
 persist.vendor.pps.disallowed=1
 persist.vendor.hvdcp_opti.disallowed=1
+
+# HWUI
+debug.hwui.use_hint_manager=true
 
 # Incremental FS
 ro.incremental.enable=true
