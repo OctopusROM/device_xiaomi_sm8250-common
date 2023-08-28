@@ -89,6 +89,7 @@ function blob_fixup() {
         vendor/etc/init/vendor.xiaomi.hardware.citsensorservice@1.1-service.rc)
             [ "$2" = "" ] && return 0
             sed -i 's/input/& wakelock/' "${2}"
+            echo '    task_profiles ServiceCapacityLow' >> ${2}
             ;;
         vendor/lib64/libril-qc-hal-qmi.so)
             [ "$2" = "" ] && return 0
