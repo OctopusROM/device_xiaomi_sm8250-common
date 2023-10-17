@@ -73,3 +73,6 @@ persist.sensor.                                                                 
 persist.sys.thermal.config                                                                          u:object_r:vendor_thermal_normal_prop:s0
 sys.thermal.                                                                                        u:object_r:vendor_thermal_normal_prop:s0
 vendor.sys.thermal.                                                                                 u:object_r:vendor_thermal_normal_prop:s0
+
+# Misc
+persist.hydra.mem_trace	                                                                            u:object_r:exported_system_prop:s0
