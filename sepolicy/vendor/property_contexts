@@ -40,8 +40,12 @@ ro.ril.miui.imei                                                                
 ro.ril.oem.imei                                                                                     u:object_r:vendor_deviceid_prop:s0
 ro.ril.oem.meid                                                                                     u:object_r:vendor_deviceid_prop:s0
 ro.vendor.oem.imei                                                                                  u:object_r:vendor_deviceid_prop:s0
-ro.vendor.oem.psno                                                                                  u:object_r:vendor_deviceid_prop:s0
-ro.vendor.oem.sno                                                                                   u:object_r:vendor_deviceid_prop:s0
+ro.vendor.oem.imei1                                                                                 u:object_r:vendor_deviceid_prop:s0
+ro.vendor.oem.imei2                                                                                 u:object_r:vendor_deviceid_prop:s0
+
+# Serial Number OEM Props
+ro.vendor.oem.sno                                                                                   u:object_r:vendor_sno_prop:s0
+ro.vendor.oem.psno                                                                                  u:object_r:vendor_sno_prop:s0
 
 # Mlipay
 persist.vendor.sys.pay                                                                              u:object_r:vendor_tee_listener_prop:s0
