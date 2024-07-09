@@ -6,7 +6,8 @@ vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,org.line
 persist.vendor.cne.feature=1
 
 # Disable Skia tracing by default
-debug.hwui.skia_atrace_enabled=false
+debug.hwui.skia_tracing_enabled=false
+debug.hwui.skia_use_perfetto_track_events=false
 
 # Display
 debug.gralloc.gfx_ubwc_disable=0
