@@ -98,3 +98,10 @@ service vendor.btmac-sh /vendor/bin/init.mi.btmac.sh
 # Radio
 on early-init
     setprop ro.vendor.radio.midevice ${ro.product.vendor.device}
+
+# Touch Sampling Rate
+on boot
+    chown system system /sys/devices/virtual/touch/touch_dev/bump_sample_rate
+    chmod 0664 /sys/devices/virtual/touch/touch_dev/bump_sample_rate
+    write /sys/devices/virtual/touch/touch_dev/bump_sample_rate 1
+    chmod 0444 /sys/devices/virtual/touch/touch_dev/bump_sample_rate
