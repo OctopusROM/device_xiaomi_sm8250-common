@@ -9,3 +9,9 @@ ro.product.mod_device                                                           
 
 # Vendor init
 ro.product.marketname                                                                               u:object_r:build_prop:s0
+
+# Parts
+ro.input.resampling                                                                                 u:object_r:exported_default_prop:s0
+viewroot.profile_rendering                                                                          u:object_r:exported_default_prop:s0
+renderthread.skia.reduceopstasksplitting                                                            u:object_r:exported_default_prop:s0
+settingsdebug.instant.packages                                                                      u:object_r:exported_default_prop:s0

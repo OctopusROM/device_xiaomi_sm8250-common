@@ -29,3 +29,5 @@ allow devicesettings_app sysfs_thermal:file w_file_perms;
 hal_client_domain(devicesettings_app, hal_motor)
 binder_call(devicesettings_app, hal_motor)
 binder_call(hal_motor, devicesettings_app)
+
+allow devicesettings_app exported_default_prop:file read;
