@@ -28,9 +28,33 @@ vendor/etc/sap.conf
 # Mlipay
 vendor/bin/mlipayd@1.1
 vendor/etc/init/vendor.xiaomi.hardware.mlipay@1.1-service.rc
--vendor/etc/vintf/manifest/manifest_vendor.xiaomi.hardware.mlipay.xml
+vendor/etc/vintf/manifest/manifest_vendor.xiaomi.hardware.mlipay.xml
 vendor/lib64/libmlipay.so
 vendor/lib64/libmlipay@1.1.so
+
+# FidoCA
+vendor/bin/fidoca
+vendor/etc/init/vendor.xiaomi.hardware.mfidoca@1.0-service.rc
+vendor/etc/vintf/manifest/manifest_vendor.xiaomi.hardware.mfidoca.xml
+vendor/lib64/libmfido.so
+product/app/FidoAuthen/FidoAuthen.apk
+
+# Mtd Service
+vendor/bin/mtd@1.3
+vendor/etc/init/vendor.xiaomi.hardware.mtdservice@1.3-service.rc
+vendor/etc/vintf/manifest/manifest_vendor.xiaomi.hardware.mtdservice.xml
+vendor/lib64/libmt.so
+vendor/lib64/libmt@1.3.so
+vendor/lib64/libwvkeybox.so
+
+# Tida Service
+vendor/bin/tidad@1.2
+vendor/etc/init/vendor.xiaomi.hardware.tidaservice@1.2-service.rc
+vendor/etc/vintf/manifest/manifest_vendor.xiaomi.hardware.tidaservice.xml
+vendor/lib64/libtida@1.2.so
+vendor/lib64/vendor.xiaomi.hardware.tidaservice@1.0.so
+vendor/lib64/vendor.xiaomi.hardware.tidaservice@1.1.so
+vendor/lib64/vendor.xiaomi.hardware.tidaservice@1.2.so
 
 # Soter service (Tencent)
 -vendor/app/SoterService/SoterService.apk

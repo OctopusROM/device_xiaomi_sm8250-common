@@ -45,6 +45,14 @@ ro.vendor.oem.sno                                                               
 
 # Mlipay
 persist.vendor.sys.pay                                                                              u:object_r:vendor_tee_listener_prop:s0
+persist.vendor.sys.pay.fido                                                                         u:object_r:vendor_payment_security_prop:s0
+persist.vendor.sys.pay.fido2                                                                        u:object_r:vendor_payment_security_prop:s0
+persist.vendor.sys.pay.ifaa                                                                         u:object_r:vendor_payment_security_prop:s0
+vendor.sys.rpmb_state                                                                               u:object_r:vendor_payment_security_prop:s0
+persist.vendor.sys.pay.widevine                                                                     u:object_r:vendor_payment_security_prop:s0
+vendor.sys.feature_state                                                                            u:object_r:vendor_payment_security_prop:s0
+persist.vendor.sys.pay.soter                                                                        u:object_r:vendor_payment_security_prop:s0
+persist.vendor.sys.provision.status                                                                 u:object_r:vendor_payment_security_prop:s0
 
 # Motor
 persist.vendor.motor.                                                                               u:object_r:vendor_motor_prop:s0

@@ -4,8 +4,11 @@ com.fingerprints.extension::IFingerprintSensorTest                              
 vendor.goodix.hardware.biometrics.fingerprint::IGoodixFingerprintDaemon                             u:object_r:hal_fingerprint_hwservice:s0
 vendor.xiaomi.hardware.fx.tunnel::IMiFxTunnel                                                       u:object_r:hal_fingerprint_hwservice:s0
 
-# Mlipay
+# Mlipay Payment
+vendor.xiaomi.hardware.mfidoca::IFidoService                                                        u:object_r:hal_mfidoca_hwservice:s0
 vendor.xiaomi.hardware.mlipay::IMlipayService                                                       u:object_r:hal_mlipay_hwservice:s0
+vendor.xiaomi.hardware.mtdservice::IMTService                                                       u:object_r:hal_mtdservice_hwservice:s0
+vendor.xiaomi.hardware.tidaservice::ITidaService                                                    u:object_r:hal_tidaservice_hwservice:s0
 
 # Motor
 vendor.xiaomi.hardware.motor::IMotor                                                                u:object_r:hal_motor_hwservice:s0

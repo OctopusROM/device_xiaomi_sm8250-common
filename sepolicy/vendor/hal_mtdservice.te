@@ -1,0 +1,48 @@
+type hal_mtdservice_default, domain;
+hal_server_domain(hal_mtdservice_default, hal_mtdservice)
+
+type hal_mtdservice_default_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(hal_mtdservice_default)
+
+# HwBinder IPC from client to server
+binder_call(hal_mtdservice_client, hal_mtdservice_server)
+
+hal_attribute_hwservice(hal_mtdservice, hal_mtdservice_hwservice)
+
+# Allow the mtd HAL to access tee device nodes
+allow hal_mtdservice_default ion_device:chr_file rw_file_perms;
+allow hal_mtdservice_default tee_device:chr_file rw_file_perms;
+allow hal_mtdservice_default vendor_qce_device:chr_file rw_file_perms;
+allow hal_mtdservice_default block_device:dir r_dir_perms;
+
+# Allow the mtd HAL to read the firmware files
+r_dir_file(hal_mtdservice_default, firmware_file)
+
+# Let the mtd HAL read and write IFAA props
+get_prop(hal_mtdservice_default, vendor_tee_listener_prop)
+set_prop(hal_mtdservice_default, vendor_tee_listener_prop)
+set_prop(hal_mtdservice_default, vendor_radio_prop)
+set_prop(hal_mtdservice_default, vendor_system_prop)
+set_prop(hal_mtdservice_default, vendor_payment_security_prop)
+
+allow hal_mtdservice_default file_contexts_file:file r_file_perms;
+allow hal_mtdservice_default mnt_vendor_file:file getattr;
+allow hal_mtdservice_default mnt_vendor_file:dir { create_dir_perms relabelfrom };
+allow hal_mtdservice_default vendor_persist_camera_file:dir { getattr read };
+allow hal_mtdservice_default vendor_persist_alarm_file:dir { getattr read };
+allow hal_mtdservice_default vendor_persist_audio_file:dir { getattr read };
+allow hal_mtdservice_default vendor_persist_data_file:dir getattr;
+allow hal_mtdservice_default vendor_persist_display_file:dir getattr;
+allow hal_mtdservice_default vendor_persist_haptics_file:dir { getattr read };
+allow hal_mtdservice_default vendor_persist_hvdcp_file:dir { getattr read };
+allow hal_mtdservice_default vendor_persist_iar_db_file:dir { getattr read };
+allow hal_mtdservice_default vendor_persist_rfs_file:dir { getattr read };
+allow hal_mtdservice_default vendor_persist_rfs_shared_hlos_file:dir getattr;
+allow hal_mtdservice_default vendor_persist_secnvm_file:dir { getattr read };
+allow hal_mtdservice_default vendor_persist_sensors_file:dir { getattr read };
+allow hal_mtdservice_default vendor_persist_subsys_file:dir { getattr read };
+allow hal_mtdservice_default vendor_persist_time_file:dir { getattr read };
+allow hal_mtdservice_default vendor_persist_vpp_file:dir getattr;
+
+dontaudit hal_mtdservice_default self:capability { dac_override dac_read_search };
