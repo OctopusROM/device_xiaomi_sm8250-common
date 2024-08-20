@@ -8,5 +8,8 @@ get_prop(rild, vendor_sno_prop)
 set_prop(rild, vendor_radio_prop)
 get_prop(rild, vendor_radio_prop)
 
+set_prop(rild, vendor_ssr_prop)
+get_prop(rild, vendor_ssr_prop)
+
 allow rild vendor_diag_device:chr_file rw_file_perms;
 allow rild vendor_pd_locater_dbg_prop:file { read open getattr map };
