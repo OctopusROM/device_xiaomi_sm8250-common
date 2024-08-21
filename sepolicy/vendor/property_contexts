@@ -44,6 +44,9 @@ ro.vendor.oem.imei1                                                             
 ro.vendor.oem.imei2                                                                                 u:object_r:vendor_deviceid_prop:s0
 ro.vendor.oem.meid                                                                                  u:object_r:vendor_deviceid_prop:s0
 
+# hyperOS prop protection level config
+ro.mi.os.                                                                                           u:object_r:exported_system_prop:s0
+
 # Serial Number OEM Props
 ro.vendor.oem.sno                                                                                   u:object_r:vendor_sno_prop:s0
 ro.vendor.oem.psno                                                                                  u:object_r:vendor_sno_prop:s0
