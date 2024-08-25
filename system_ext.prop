@@ -3,3 +3,7 @@ ro.sf.blurs_are_expensive=1
 ro.surface_flinger.supports_background_blur=1
 ro.launcher.blur.appLaunch=1
 persist.sys.sf.disable_blurs=0
+
+# Telephony
+ro.telephony.sim_slots.count=1
+telephony.active_modems.max_count=2
