@@ -68,6 +68,10 @@ persist.vendor.motor.                                                           
 # RIL
 ro.vendor.ril                                                                                       u:object_r:vendor_public_vendor_default_prop:s0
 
+# Radio
+persist.radio.VT_HYBRID_ENABLE                                                                      u:object_r:vendor_radio_prop:s0
+persist.radio.NO_STAPA                                                                              u:object_r:vendor_radio_prop:s0
+
 # Sensor
 invn.hal.                                                                                           u:object_r:vendor_sensors_prop:s0
 persist.sensor.                                                                                     u:object_r:vendor_sensors_prop:s0
