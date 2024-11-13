@@ -78,6 +78,10 @@ function blob_fixup() {
             [ "$2" = "" ] && return 0
             "${PATCHELF}" --add-needed "libinput_shim.so" "${2}"
             ;;
+        system_ext/lib64/libwfdmmsrc_system.so)
+            [ "$2" = "" ] && return 0
+            "${PATCHELF}" --add-needed "libgui_shim.so" "${2}"
+            ;;
         vendor/etc/init/init.mi_thermald.rc)
             [ "$2" = "" ] && return 0
             sed -i "/seclabel u:r:mi_thermald:s0/d" "${2}"
