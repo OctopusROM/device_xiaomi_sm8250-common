@@ -65,6 +65,9 @@ persist.vendor.sys.provision.status                                             
 # Motor
 persist.vendor.motor.                                                                               u:object_r:vendor_motor_prop:s0
 
+# Panel Info
+vendor.panel.                                                                                       u:object_r:vendor_display_prop:s0
+
 # RIL
 ro.vendor.ril                                                                                       u:object_r:vendor_public_vendor_default_prop:s0
 

@@ -11,3 +11,5 @@ allow vendor_qti_init_shell vendor_wifi_vendor_data_file:file r_file_perms;
 allow vendor_qti_init_shell sysfs:file setattr;
 
 allow vendor_qti_init_shell proc_page_cluster:file { open write };
+
+set_prop(vendor_qti_init_shell, vendor_display_prop)
