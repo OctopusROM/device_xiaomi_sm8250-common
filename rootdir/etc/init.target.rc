@@ -28,10 +28,6 @@
 #
 #
 
-on early-init
-    write /sys/class/drm/card0/card0-DSI-1/thermal_hbm_disabled 0
-    chmod 0444 /sys/class/drm/card0/card0-DSI-1/thermal_hbm_disabled
-
 on init
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
