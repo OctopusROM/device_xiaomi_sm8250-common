@@ -48,6 +48,9 @@ persist.sys.radio.force_lte_ca=true
 # Netflix
 ro.netflix.bsp_rev=Q8250-19134-1
 
+# OEM Unlock reporting
+ro.oem_unlock_supported=0
+
 # Perf
 ro.vendor.qti.core_ctl_max_cpu=4
 ro.vendor.qti.core_ctl_min_cpu=2
