@@ -50,9 +50,7 @@ public class HBMModeSwitch implements OnPreferenceChangeListener {
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         Boolean enabled = (Boolean) newValue;
         FileUtils.writeLine(getHBM(), enabled ? "0x10000" : "0xF0000");
-        if (enabled) {
-            FileUtils.writeLine(getBACKLIGHT(), "2047");
-        }
+        FileUtils.writeLine(getBACKLIGHT(), enabled ? "2047" : "2047");
         return true;
     }
 }
