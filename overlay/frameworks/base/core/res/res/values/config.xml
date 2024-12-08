@@ -364,9 +364,6 @@
     <!-- Whether the new Auto Selection Network UI should be shown -->
     <bool name="config_enableNewAutoSelectNetworkUI">true</bool>
 
-    <!-- Disable source pocket mode -->
-    <bool name="config_pocketModeSupported">false</bool>
-
     <!-- Determines whether the shell features all run on another thread. -->
     <bool name="config_enableShellMainThread">true</bool>
 </resources>
