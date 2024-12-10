@@ -42,9 +42,6 @@ persist.dbg.wfc_avail_ovr=1
 # LMK
 ro.config.low_ram=false
 
-# LTE CA
-persist.sys.radio.force_lte_ca=true
-
 # Netflix
 ro.netflix.bsp_rev=Q8250-19134-1
 
