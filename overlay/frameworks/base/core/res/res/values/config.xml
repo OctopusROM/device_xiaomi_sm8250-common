@@ -379,4 +379,7 @@
 
     <!-- Enable Zram writeback feature to allow unused pages in zram be written to flash. -->
     <bool name="config_zramWriteback">true</bool>
+
+    <!-- Enable PowerOffAlarmService. -->
+    <bool name="config_powerOffAlarmEnabled">true</bool>
 </resources>
