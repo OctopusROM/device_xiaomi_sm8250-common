@@ -166,9 +166,6 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@4.0-impl-qti-display \
     vendor.qti.hardware.display.allocator-service
 
-PRODUCT_PACKAGES += \
-    vendor.qti.hardware.memtrack-service
-
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey
