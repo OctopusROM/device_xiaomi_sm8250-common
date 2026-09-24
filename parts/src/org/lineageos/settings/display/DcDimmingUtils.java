@@ -25,6 +25,6 @@ public final class DcDimmingUtils {
     }
 
     public static boolean setEnabled(boolean enabled) {
-        return FileUtils.writeLine(NODE, enabled ? "1" : "0");
+        return FileUtils.writeLine(NODE, enabled ? "1" : "0") && isEnabled() == enabled;
     }
 }
