@@ -22,6 +22,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
 
+import androidx.preference.PreferenceManager;
+
+import org.lineageos.settings.display.DcDimmingUtils;
 import org.lineageos.settings.popupcamera.PopupCameraUtils;
 import org.lineageos.settings.thermal.ThermalUtils;
 
@@ -35,5 +38,9 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         if (DEBUG) Log.d(TAG, "Received boot completed intent");
         PopupCameraUtils.checkPopupCameraService(context);
         ThermalUtils.startService(context);
+        if (DcDimmingUtils.isAvailable()) {
+            DcDimmingUtils.setEnabled(PreferenceManager.getDefaultSharedPreferences(context)
+                    .getBoolean(DcDimmingUtils.KEY, false));
+        }
     }
 }
