@@ -9,6 +9,8 @@ package org.lineageos.settings.display;
 import android.service.quicksettings.Tile;
 import android.service.quicksettings.TileService;
 
+import androidx.preference.PreferenceManager;
+
 public class DcDimmingTileService extends TileService {
     @Override
     public void onStartListening() {
@@ -20,7 +22,11 @@ public class DcDimmingTileService extends TileService {
     public void onClick() {
         super.onClick();
         if (DcDimmingUtils.isAvailable()) {
-            DcDimmingUtils.setEnabled(!DcDimmingUtils.isEnabled());
+            boolean enabled = !DcDimmingUtils.isEnabled();
+            if (DcDimmingUtils.setEnabled(enabled)) {
+                PreferenceManager.getDefaultSharedPreferences(this).edit()
+                        .putBoolean(DcDimmingUtils.KEY, enabled).apply();
+            }
         }
         updateTile();
     }
