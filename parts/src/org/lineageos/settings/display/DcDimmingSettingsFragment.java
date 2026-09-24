@@ -28,9 +28,12 @@ public class DcDimmingSettingsFragment extends SettingsBasePreferenceFragment {
     @Override
     public void onResume() {
         super.onResume();
-        mDcDimming.setEnabled(DcDimmingUtils.isAvailable());
-        mDcDimming.setChecked(DcDimmingUtils.isAvailable() && DcDimmingUtils.isEnabled());
-        mDcDimming.setSummary(DcDimmingUtils.isAvailable()
+        boolean available = DcDimmingUtils.isAvailable();
+        mDcDimming.setEnabled(available);
+        if (available) {
+            mDcDimming.setChecked(DcDimmingUtils.isEnabled());
+        }
+        mDcDimming.setSummary(available
                 ? R.string.dc_dimming_summary : R.string.dc_dimming_unavailable);
     }
 
