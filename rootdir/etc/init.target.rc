@@ -139,6 +139,8 @@ on boot
     setprop vendor.usb.controller a600000.dwc3
 
     chown system system /sys/class/drm/card0-DSI-1/disp_param
+    chown system system /sys/devices/platform/soc/soc:qcom,dsi-display-primary/msm_fb_ea_enable
+    chmod 0660 /sys/devices/platform/soc/soc:qcom,dsi-display-primary/msm_fb_ea_enable
     chown system system /proc/tp_selftest
     chmod 0664 /proc/tp_selftest
     chmod 0664 /sys/class/drm/card0-DSI-1/disp_param
