@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dc_dimming_title">DC 调光</string>
+    <string name="dc_dimming_summary">降低低亮度下的屏幕闪烁；颜色可能发生变化</string>
+    <string name="dc_dimming_unavailable">当前内核不支持此功能</string>
+</resources>

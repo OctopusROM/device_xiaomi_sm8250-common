@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dc_dimming_title">Atténuation CC</string>
+    <string name="dc_dimming_summary">Réduit le scintillement à faible luminosité ; les couleurs peuvent changer</string>
+    <string name="dc_dimming_unavailable">Non pris en charge par le noyau actuel</string>
+</resources>

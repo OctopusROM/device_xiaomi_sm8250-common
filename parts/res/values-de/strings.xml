@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dc_dimming_title">DC-Dimmen</string>
+    <string name="dc_dimming_summary">Verringert Flimmern bei geringer Helligkeit; Farben können sich ändern</string>
+    <string name="dc_dimming_unavailable">Vom aktuellen Kernel nicht unterstützt</string>
+</resources>

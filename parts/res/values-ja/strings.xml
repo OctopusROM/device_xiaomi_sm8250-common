@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dc_dimming_title">DC調光</string>
+    <string name="dc_dimming_summary">低輝度時のちらつきを抑えます。色が変化する場合があります</string>
+    <string name="dc_dimming_unavailable">現在のカーネルではサポートされていません</string>
+</resources>

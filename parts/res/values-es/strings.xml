@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dc_dimming_title">Atenuación DC</string>
+    <string name="dc_dimming_summary">Reduce el parpadeo con brillo bajo; los colores pueden cambiar</string>
+    <string name="dc_dimming_unavailable">El kernel actual no admite esta función</string>
+</resources>

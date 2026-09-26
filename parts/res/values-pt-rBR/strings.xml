@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dc_dimming_title">Escurecimento DC</string>
+    <string name="dc_dimming_summary">Reduz a cintilação com brilho baixo; as cores podem mudar</string>
+    <string name="dc_dimming_unavailable">Não é compatível com o kernel atual</string>
+</resources>

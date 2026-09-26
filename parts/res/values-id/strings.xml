@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dc_dimming_title">Peredupan DC</string>
+    <string name="dc_dimming_summary">Mengurangi kedipan pada kecerahan rendah; warna dapat berubah</string>
+    <string name="dc_dimming_unavailable">Tidak didukung oleh kernel saat ini</string>
+</resources>

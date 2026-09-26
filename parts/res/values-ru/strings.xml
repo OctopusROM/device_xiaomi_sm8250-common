@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dc_dimming_title">DC-димминг</string>
+    <string name="dc_dimming_summary">Уменьшает мерцание при низкой яркости; цвета могут измениться</string>
+    <string name="dc_dimming_unavailable">Не поддерживается текущим ядром</string>
+</resources>

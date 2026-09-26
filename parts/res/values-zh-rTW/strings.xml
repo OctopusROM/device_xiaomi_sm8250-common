@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dc_dimming_title">DC 調光</string>
+    <string name="dc_dimming_summary">減少低亮度時的螢幕閃爍；色彩可能發生變化</string>
+    <string name="dc_dimming_unavailable">目前的核心不支援此功能</string>
+</resources>
