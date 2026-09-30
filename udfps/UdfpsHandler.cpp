@@ -9,14 +9,22 @@
 #include "UdfpsHandler.h"
 
 #include <android-base/logging.h>
+#include <android-base/unique_fd.h>
 #include <fcntl.h>
 #include <poll.h>
+#include <sys/ioctl.h>
 #include <thread>
 #include <unistd.h>
 
 #define COMMAND_NIT 10
 #define PARAM_NIT_FOD 1
 #define PARAM_NIT_NONE 0
+
+#define TOUCH_FOD_ENABLE 10
+#define TOUCH_IOC_SETMODE 0x5400
+#define FOD_STATUS_ON 1
+// FocalTech ignores negative values; 100 means no fingerprint operation.
+#define FOD_STATUS_OFF 100
 
 static const char* kFodUiPaths[] = {
         "/sys/devices/platform/soc/soc:qcom,dsi-display-primary/fod_ui",
@@ -50,6 +58,10 @@ class XiaomiKonaUdfpsHandler : public UdfpsHandler {
   public:
     void init(fingerprint_device_t *device) {
         mDevice = device;
+        mTouchFd.reset(open("/dev/xiaomi-touch", O_RDWR | O_CLOEXEC));
+        if (mTouchFd.get() >= 0) {
+            setFodStatus(FOD_STATUS_OFF);
+        }
 
         std::thread([this]() {
             int fd;
@@ -103,15 +115,34 @@ class XiaomiKonaUdfpsHandler : public UdfpsHandler {
         // nothing
     }
 
-    void onAcquired(int32_t /*result*/, int32_t /*vendorCode*/) {
-        // nothing
+    void onAcquired(int32_t /*result*/, int32_t vendorCode) {
+        // Goodix reports waiting for authentication as 21.
+        if (vendorCode == 21) {
+            setFodStatus(FOD_STATUS_ON);
+        }
+    }
+
+    void onAuthenticationSucceeded() {
+        setFodStatus(FOD_STATUS_OFF);
     }
 
     void cancel() {
-        // nothing
+        setFodStatus(FOD_STATUS_OFF);
     }
   private:
+    void setFodStatus(int status) {
+        if (mTouchFd.get() < 0) {
+            return;
+        }
+        // The driver copies a full MAX_BUF_SIZE array in both directions.
+        int args[256] = {TOUCH_FOD_ENABLE, status};
+        if (ioctl(mTouchFd.get(), TOUCH_IOC_SETMODE, args) < 0) {
+            PLOG(ERROR) << "failed to set touchscreen FOD status: " << status;
+        }
+    }
+
     fingerprint_device_t *mDevice;
+    android::base::unique_fd mTouchFd;
 };
 
 static UdfpsHandler* create() {
