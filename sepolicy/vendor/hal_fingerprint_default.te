@@ -11,6 +11,9 @@ allow hal_fingerprint_default vendor_persist_fingerprint_file:file create_file_p
 # Allow the fingerprint HAL to use fingerprint devices
 allow hal_fingerprint_default fingerprint_device:chr_file rw_file_perms;
 
+allow hal_fingerprint_default vendor_xiaomi_touch_device:chr_file rw_file_perms;
+allowxperm hal_fingerprint_default vendor_xiaomi_touch_device:chr_file ioctl { 0x5400 };
+
 # Allow the fingerprint HAL to use the input devices
 allow hal_fingerprint_default input_device:dir r_dir_perms;
 allow hal_fingerprint_default input_device:chr_file rw_file_perms;

@@ -7,3 +7,5 @@ type motor_device, dev_type;
 type sound_device, dev_type;
 
 type ultrasound_device, dev_type;
+
+type vendor_xiaomi_touch_device, dev_type;
