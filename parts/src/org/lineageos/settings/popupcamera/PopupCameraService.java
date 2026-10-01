@@ -22,6 +22,7 @@ import android.app.Service;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Resources;
+import android.graphics.Color;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -42,7 +43,6 @@ import android.widget.Toast;
 import org.lineageos.settings.R;
 import org.lineageos.settings.sensors.ProximitySensor;
 import org.lineageos.settings.sensors.SensorsUtils;
-import org.lineageos.settings.utils.FileUtils;
 
 import vendor.xiaomi.hardware.motor.V1_0.IMotor;
 import vendor.xiaomi.hardware.motor.V1_0.IMotorCallback;
@@ -62,10 +62,7 @@ public class PopupCameraService extends Service implements Handler.Callback {
     private long mClosedEvent;
     private long mOpenEvent;
     private Handler mHandler = new Handler(this);
-    private final Runnable mLedOff = () -> {
-        FileUtils.writeLine(Constants.BLUE_LED_PATH, "0");
-        FileUtils.writeLine(Constants.BLUE_RIGHT_LED_PATH, "0");
-    };
+    private final Runnable mLedOff = () -> PopupCameraLed.setColor(Color.BLACK);
     private boolean mMotorCalibrating = false;
     private boolean mErrorDialogShowing;
 
@@ -322,8 +319,7 @@ public class PopupCameraService extends Service implements Handler.Callback {
     private void lightUp() {
         if (mPopupCameraPreferences.isLedAllowed()) {
             mHandler.removeCallbacks(mLedOff);
-            FileUtils.writeLine(Constants.BLUE_LED_PATH, "1");
-            FileUtils.writeLine(Constants.BLUE_RIGHT_LED_PATH, "1");
+            PopupCameraLed.setColor(mPopupCameraPreferences.getLedColor());
             mHandler.postDelayed(mLedOff, 2300);
         }
     }
