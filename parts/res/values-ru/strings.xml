@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="popup_screen_effect_title">Анимация камеры на экране</string>
+    <string name="popup_screen_effect_summary">Показывать анимацию волн MIUI при выдвижении и втягивании фронтальной камеры</string>
     <string name="popup_led_title">Подсветка камеры</string>
     <string name="popup_led_summary">Включать подсветку при выдвижении и втягивании фронтальной камеры</string>
-    <string name="popup_led_color_title">Цвет подсветки камеры</string>
+    <string name="popup_led_color_title">Цвет эффектов камеры</string>
     <string name="popup_led_color_blue">Синий</string>
     <string name="popup_led_color_red">Красный</string>
     <string name="popup_led_color_green">Зелёный</string>

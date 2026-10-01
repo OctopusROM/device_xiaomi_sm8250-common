@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="popup_screen_effect_title">Kamera-Bildschirmanimation</string>
+    <string name="popup_screen_effect_summary">MIUI-Wellenanimation beim Ausfahren und Einfahren der Frontkamera anzeigen</string>
     <string name="popup_led_title">Kamera-LED</string>
     <string name="popup_led_summary">LED beim Ausfahren und Einfahren der Frontkamera einschalten</string>
-    <string name="popup_led_color_title">Farbe der Kamera-LED</string>
+    <string name="popup_led_color_title">Farbe der Kameraeffekte</string>
     <string name="popup_led_color_blue">Blau</string>
     <string name="popup_led_color_red">Rot</string>
     <string name="popup_led_color_green">Grün</string>

@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="popup_screen_effect_title">Animation de la caméra à l’écran</string>
+    <string name="popup_screen_effect_summary">Afficher l’animation d’ondes MIUI lorsque la caméra avant sort et se rétracte</string>
     <string name="popup_led_title">LED de la caméra</string>
     <string name="popup_led_summary">Allumer la LED lorsque la caméra avant sort et se rétracte</string>
-    <string name="popup_led_color_title">Couleur de la LED de la caméra</string>
+    <string name="popup_led_color_title">Couleur des effets de la caméra</string>
     <string name="popup_led_color_blue">Bleu</string>
     <string name="popup_led_color_red">Rouge</string>
     <string name="popup_led_color_green">Vert</string>

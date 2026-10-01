@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="popup_screen_effect_title">Animasi kamera di layar</string>
+    <string name="popup_screen_effect_summary">Tampilkan animasi gelombang MIUI saat kamera depan naik dan masuk kembali</string>
     <string name="popup_led_title">LED kamera</string>
     <string name="popup_led_summary">Nyalakan LED saat kamera depan naik dan masuk kembali</string>
-    <string name="popup_led_color_title">Warna LED kamera</string>
+    <string name="popup_led_color_title">Warna efek kamera</string>
     <string name="popup_led_color_blue">Biru</string>
     <string name="popup_led_color_red">Merah</string>
     <string name="popup_led_color_green">Hijau</string>

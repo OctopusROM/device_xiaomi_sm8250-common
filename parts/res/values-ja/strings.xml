@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="popup_screen_effect_title">カメラの画面アニメーション</string>
+    <string name="popup_screen_effect_summary">カメラ昇降時にMIUIの波紋を表示</string>
     <string name="popup_led_title">カメラLED</string>
     <string name="popup_led_summary">前面カメラが出入りするときにLEDを点灯する</string>
-    <string name="popup_led_color_title">カメラLEDの色</string>
+    <string name="popup_led_color_title">カメラエフェクトの色</string>
     <string name="popup_led_color_blue">青</string>
     <string name="popup_led_color_red">赤</string>
     <string name="popup_led_color_green">緑</string>

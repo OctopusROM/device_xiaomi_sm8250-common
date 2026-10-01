@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="popup_screen_effect_title">前摄屏幕特效</string>
+    <string name="popup_screen_effect_summary">前置摄像头升降时播放 MIUI 波纹动画</string>
     <string name="popup_led_title">前摄 LED</string>
     <string name="popup_led_summary">前置摄像头升起和收回时亮灯</string>
-    <string name="popup_led_color_title">前摄 LED 颜色</string>
+    <string name="popup_led_color_title">前摄灯光与特效颜色</string>
     <string name="popup_led_color_blue">蓝色</string>
     <string name="popup_led_color_red">红色</string>
     <string name="popup_led_color_green">绿色</string>

@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="popup_screen_effect_title">카메라 화면 애니메이션</string>
+    <string name="popup_screen_effect_summary">카메라 승강 시 MIUI 물결 효과 표시</string>
     <string name="popup_led_title">카메라 LED</string>
     <string name="popup_led_summary">전면 카메라가 올라오거나 들어갈 때 LED 켜기</string>
-    <string name="popup_led_color_title">카메라 LED 색상</string>
+    <string name="popup_led_color_title">카메라 효과 색상</string>
     <string name="popup_led_color_blue">파란색</string>
     <string name="popup_led_color_red">빨간색</string>
     <string name="popup_led_color_green">초록색</string>
