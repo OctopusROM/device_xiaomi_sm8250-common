@@ -18,9 +18,12 @@ package org.lineageos.settings.popupcamera;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.preference.PreferenceManager;
 
 public class PopupCameraPreferences {
+
+    public static final String LED_COLOR_KEY = "popup_led_color";
 
     private static final String TAG = "PopupCameraUtils";
     private static final boolean DEBUG = false;
@@ -40,5 +43,9 @@ public class PopupCameraPreferences {
 
     public boolean isLedAllowed() {
         return mSharedPrefs.getBoolean(LED_EFFECT_KEY, LED_EFFECT_DEFAULT_VALUE);
+    }
+
+    public int getLedColor() {
+        return mSharedPrefs.getInt(LED_COLOR_KEY, Color.BLUE);
     }
 }
