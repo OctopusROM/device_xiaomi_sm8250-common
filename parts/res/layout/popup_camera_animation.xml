@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:importantForAccessibility="noHideDescendants"
+    android:layoutDirection="ltr">
+    <ImageView
+        android:id="@+id/popup_camera_low_wave"
+        android:layout_gravity="top|left"
+        android:layout_width="1067px"
+        android:layout_height="320px"
+        android:src="@drawable/pop_camera_low_wave1" />
+    <ImageView
+        android:id="@+id/popup_camera_high_wave"
+        android:layout_gravity="top|left"
+        android:layout_width="554px"
+        android:layout_height="115px"
+        android:src="@drawable/pop_camera_high_wave1" />
+</FrameLayout>
