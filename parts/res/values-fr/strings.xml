@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="popup_led_title">LED de la caméra</string>
+    <string name="popup_led_summary">Allumer la LED lorsque la caméra avant sort et se rétracte</string>
+    <string name="popup_led_color_title">Couleur de la LED de la caméra</string>
+    <string name="popup_led_color_blue">Bleu</string>
+    <string name="popup_led_color_red">Rouge</string>
+    <string name="popup_led_color_green">Vert</string>
+    <string name="popup_led_color_cyan">Cyan</string>
+    <string name="popup_led_color_magenta">Magenta</string>
+    <string name="popup_led_color_yellow">Jaune</string>
+    <string name="popup_led_color_white">Blanc</string>
     <string name="dc_dimming_title">Atténuation CC</string>
     <string name="dc_dimming_summary">Réduit le scintillement à faible luminosité ; les couleurs peuvent changer</string>
     <string name="dc_dimming_unavailable">Non pris en charge par le noyau actuel</string>

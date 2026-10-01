@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="popup_led_title">前摄 LED</string>
+    <string name="popup_led_summary">前置摄像头升起和收回时亮灯</string>
+    <string name="popup_led_color_title">前摄 LED 颜色</string>
+    <string name="popup_led_color_blue">蓝色</string>
+    <string name="popup_led_color_red">红色</string>
+    <string name="popup_led_color_green">绿色</string>
+    <string name="popup_led_color_cyan">青色</string>
+    <string name="popup_led_color_magenta">紫色</string>
+    <string name="popup_led_color_yellow">黄色</string>
+    <string name="popup_led_color_white">白色</string>
     <string name="dc_dimming_title">DC 调光</string>
     <string name="dc_dimming_summary">降低低亮度下的屏幕闪烁；颜色可能发生变化</string>
     <string name="dc_dimming_unavailable">当前内核不支持此功能</string>

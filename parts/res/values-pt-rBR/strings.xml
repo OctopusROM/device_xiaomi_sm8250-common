@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="popup_led_title">LED da câmera</string>
+    <string name="popup_led_summary">Acender o LED quando a câmera frontal sobe e se retrai</string>
+    <string name="popup_led_color_title">Cor do LED da câmera</string>
+    <string name="popup_led_color_blue">Azul</string>
+    <string name="popup_led_color_red">Vermelho</string>
+    <string name="popup_led_color_green">Verde</string>
+    <string name="popup_led_color_cyan">Ciano</string>
+    <string name="popup_led_color_magenta">Magenta</string>
+    <string name="popup_led_color_yellow">Amarelo</string>
+    <string name="popup_led_color_white">Branco</string>
     <string name="dc_dimming_title">Escurecimento DC</string>
     <string name="dc_dimming_summary">Reduz a cintilação com brilho baixo; as cores podem mudar</string>
     <string name="dc_dimming_unavailable">Não é compatível com o kernel atual</string>

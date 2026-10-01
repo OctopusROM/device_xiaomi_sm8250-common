@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="popup_led_title">Подсветка камеры</string>
+    <string name="popup_led_summary">Включать подсветку при выдвижении и втягивании фронтальной камеры</string>
+    <string name="popup_led_color_title">Цвет подсветки камеры</string>
+    <string name="popup_led_color_blue">Синий</string>
+    <string name="popup_led_color_red">Красный</string>
+    <string name="popup_led_color_green">Зелёный</string>
+    <string name="popup_led_color_cyan">Голубой</string>
+    <string name="popup_led_color_magenta">Пурпурный</string>
+    <string name="popup_led_color_yellow">Жёлтый</string>
+    <string name="popup_led_color_white">Белый</string>
     <string name="dc_dimming_title">DC-димминг</string>
     <string name="dc_dimming_summary">Уменьшает мерцание при низкой яркости; цвета могут измениться</string>
     <string name="dc_dimming_unavailable">Не поддерживается текущим ядром</string>
