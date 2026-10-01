@@ -45,6 +45,10 @@ public class PopupCameraPreferences {
         return mSharedPrefs.getBoolean(LED_EFFECT_KEY, LED_EFFECT_DEFAULT_VALUE);
     }
 
+    public boolean isAnimationAllowed() {
+        return mSharedPrefs.getBoolean("popup_screen_effect", true);
+    }
+
     public int getLedColor() {
         return mSharedPrefs.getInt(LED_COLOR_KEY, Color.BLUE);
     }

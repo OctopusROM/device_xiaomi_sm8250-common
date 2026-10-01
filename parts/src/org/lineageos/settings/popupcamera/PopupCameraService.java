@@ -21,6 +21,7 @@ import android.app.AlertDialog;
 import android.app.Service;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.graphics.Color;
 import android.hardware.Sensor;
@@ -67,6 +68,7 @@ public class PopupCameraService extends Service implements Handler.Callback {
     private boolean mErrorDialogShowing;
 
     private PopupCameraPreferences mPopupCameraPreferences;
+    private PopupCameraAnimation mAnimation;
 
     private SensorManager mSensorManager;
     private Sensor mFreeFallSensor;
@@ -156,6 +158,7 @@ public class PopupCameraService extends Service implements Handler.Callback {
         mProximitySensor = new ProximitySensor(this);
 
         mPopupCameraPreferences = new PopupCameraPreferences(this);
+        mAnimation = new PopupCameraAnimation(this);
 
         mSoundPool = new SoundPool.Builder()
                 .setMaxStreams(1)
@@ -204,12 +207,20 @@ public class PopupCameraService extends Service implements Handler.Callback {
     public void onDestroy() {
         if (DEBUG)
             Log.d(TAG, "Destroying service");
-        IMotor motor = getMotor();
-        if (motor == null) {
-            return;
-        }
+        mHandler.removeCallbacksAndMessages(null);
+        mAnimation.stop();
+        PopupCameraLed.setColor(Color.BLACK);
+        getSystemService(CameraManager.class).unregisterAvailabilityCallback(mAvailabilityCallback);
+        mSensorManager.unregisterListener(mFreeFallListener);
+        mSoundPool.release();
         mProximitySensor.disable();
         super.onDestroy();
+    }
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        mAnimation.stop();
     }
 
     @Override
@@ -251,6 +262,7 @@ public class PopupCameraService extends Service implements Handler.Callback {
                     mMotor.setMotorCallback(mMotorCallback);
                     mMotor.asBinder().linkToDeath((cookie) -> {
                         mMotor = null;
+                        mHandler.post(mAnimation::stop);
                     }, 0);
                 }
             } catch (RemoteException e) {
@@ -267,22 +279,33 @@ public class PopupCameraService extends Service implements Handler.Callback {
         }
         final Runnable r = () -> {
             mMotorBusy = true;
+            int color = mPopupCameraPreferences.getLedColor();
             try {
                 int status = motor.getMotorStatus();
                 if (DEBUG)
                     Log.d(TAG, "updateMotor: status=" + status);
                 if (cameraState.equals(Constants.OPEN_CAMERA_STATE) &&
                         motor.getMotorStatus() == Constants.MOTOR_STATUS_TAKEBACK_OK) {
-                    lightUp();
+                    lightUp(color);
                     playSoundEffect(Constants.OPEN_CAMERA_STATE);
                     motor.popupMotor(1);
+                    if (mPopupCameraPreferences.isAnimationAllowed()) {
+                        mAnimation.start(true, color);
+                    } else {
+                        mAnimation.stop();
+                    }
                     mSensorManager.registerListener(mFreeFallListener, mFreeFallSensor,
                             SensorManager.SENSOR_DELAY_NORMAL);
                 } else if (cameraState.equals(Constants.CLOSE_CAMERA_STATE) &&
                         motor.getMotorStatus() == Constants.MOTOR_STATUS_POPUP_OK) {
-                    lightUp();
+                    lightUp(color);
                     playSoundEffect(Constants.CLOSE_CAMERA_STATE);
                     motor.takebackMotor(1);
+                    if (mPopupCameraPreferences.isAnimationAllowed()) {
+                        mAnimation.start(false, color);
+                    } else {
+                        mAnimation.stop();
+                    }
                     mSensorManager.unregisterListener(mFreeFallListener, mFreeFallSensor);
                 } else {
                     mMotorBusy = false;
@@ -295,6 +318,7 @@ public class PopupCameraService extends Service implements Handler.Callback {
                     return;
                 }
             } catch (RemoteException e) {
+                mAnimation.stop();
                 // Do nothing
             }
             mHandler.postDelayed(() -> mMotorBusy = false, 1200);
@@ -316,10 +340,10 @@ public class PopupCameraService extends Service implements Handler.Callback {
         }
     }
 
-    private void lightUp() {
+    private void lightUp(int color) {
         if (mPopupCameraPreferences.isLedAllowed()) {
             mHandler.removeCallbacks(mLedOff);
-            PopupCameraLed.setColor(mPopupCameraPreferences.getLedColor());
+            PopupCameraLed.setColor(color);
             mHandler.postDelayed(mLedOff, 2300);
         }
     }
@@ -350,6 +374,7 @@ public class PopupCameraService extends Service implements Handler.Callback {
     }
 
     private void showErrorDialog() {
+        mHandler.post(mAnimation::stop);
         if (mErrorDialogShowing) {
             return;
         }

@@ -3,12 +3,17 @@
                   xmlns:app="http://schemas.android.com/apk/res-auto">
     <SwitchPreferenceCompat
         android:defaultValue="true"
+        android:key="popup_screen_effect"
+        android:summary="@string/popup_screen_effect_summary"
+        android:title="@string/popup_screen_effect_title" />
+
+    <SwitchPreferenceCompat
+        android:defaultValue="true"
         android:key="popup_led_effect"
         android:summary="@string/popup_led_summary"
         android:title="@string/popup_led_title" />
 
     <Preference
-        android:dependency="popup_led_effect"
         android:key="popup_led_color"
         android:title="@string/popup_led_color_title" />
 

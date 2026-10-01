@@ -20,9 +20,11 @@
     <string name="dc_dimming_unavailable">Not supported by the current kernel</string>
 
     <!-- Popup camera settings -->
+    <string name="popup_screen_effect_title">Camera screen animation</string>
+    <string name="popup_screen_effect_summary">Show the MIUI wave animation when the front camera rises and retracts</string>
     <string name="popup_led_title">Camera LED</string>
     <string name="popup_led_summary">Show LED light when the front camera appears and retracts</string>
-    <string name="popup_led_color_title">Camera LED color</string>
+    <string name="popup_led_color_title">Camera effect color</string>
     <string name="popup_led_color_blue">Blue</string>
     <string name="popup_led_color_red">Red</string>
     <string name="popup_led_color_green">Green</string>
