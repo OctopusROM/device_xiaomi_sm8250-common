@@ -15,6 +15,7 @@ android_app {
     privileged: true,
 
     static_libs: [
+        "colorpicker",
         "org.lineageos.settings.resources",
         "vendor.xiaomi.hardware.motor-V1.0-java",
         "SettingsLib",

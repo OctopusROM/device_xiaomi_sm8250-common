@@ -15,6 +15,27 @@
      limitations under the License.
 -->
 <resources>
+    <!-- RGB channel combinations supported by the camera LED breath interface. -->
+    <integer-array name="popupcamera_led_colors">
+        <item>0xff0000ff</item>
+        <item>0xffff0000</item>
+        <item>0xff00ff00</item>
+        <item>0xff00ffff</item>
+        <item>0xffff00ff</item>
+        <item>0xffffff00</item>
+        <item>0xffc0c0c0</item>
+    </integer-array>
+
+    <string-array name="popupcamera_led_color_names">
+        <item>@string/popup_led_color_blue</item>
+        <item>@string/popup_led_color_red</item>
+        <item>@string/popup_led_color_green</item>
+        <item>@string/popup_led_color_cyan</item>
+        <item>@string/popup_led_color_magenta</item>
+        <item>@string/popup_led_color_yellow</item>
+        <item>@string/popup_led_color_white</item>
+    </string-array>
+
     <!-- Popup camera effect names -->
     <string-array name="popupcamera_effects_names" translatable="false">
         <item>popup_muqin_up.ogg</item>

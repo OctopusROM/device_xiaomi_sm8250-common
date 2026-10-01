@@ -22,6 +22,14 @@
     <!-- Popup camera settings -->
     <string name="popup_led_title">Camera LED</string>
     <string name="popup_led_summary">Show LED light when the front camera appears and retracts</string>
+    <string name="popup_led_color_title">Camera LED color</string>
+    <string name="popup_led_color_blue">Blue</string>
+    <string name="popup_led_color_red">Red</string>
+    <string name="popup_led_color_green">Green</string>
+    <string name="popup_led_color_cyan">Cyan</string>
+    <string name="popup_led_color_magenta">Magenta</string>
+    <string name="popup_led_color_yellow">Yellow</string>
+    <string name="popup_led_color_white">White</string>
     <string name="popup_title">Front camera sound effects</string>
     <string name="popup_title_muqin">Xylophone</string>
     <string name="popup_title_yingyan">Condor</string>
