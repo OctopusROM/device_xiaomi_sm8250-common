@@ -115,9 +115,11 @@ class XiaomiKonaUdfpsHandler : public UdfpsHandler {
         // nothing
     }
 
-    void onAcquired(int32_t /*result*/, int32_t vendorCode) {
-        // Goodix reports waiting for authentication as 21.
-        if (vendorCode == 21) {
+    void onAcquired(int32_t result, int32_t vendorCode) {
+        // Goodix reports waiting for authentication as 21 and enrollment as 23.
+        if (result == FINGERPRINT_ACQUIRED_GOOD) {
+            setFodStatus(FOD_STATUS_OFF);
+        } else if (vendorCode == 21 || vendorCode == 23) {
             setFodStatus(FOD_STATUS_ON);
         }
     }
