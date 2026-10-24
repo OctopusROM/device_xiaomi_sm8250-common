@@ -15,4 +15,6 @@
     <string name="dc_dimming_title">Peredupan DC</string>
     <string name="dc_dimming_summary">Mengurangi kedipan pada kecerahan rendah; warna dapat berubah</string>
     <string name="dc_dimming_unavailable">Tidak didukung oleh kernel saat ini</string>
+    <string name="screen_off_udfps_title">Sidik jari saat layar mati</string>
+    <string name="screen_off_udfps_summary">Buka kunci dengan sidik jari saat layar mati</string>
 </resources>

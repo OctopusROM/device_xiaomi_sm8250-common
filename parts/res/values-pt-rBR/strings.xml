@@ -15,4 +15,6 @@
     <string name="dc_dimming_title">Escurecimento DC</string>
     <string name="dc_dimming_summary">Reduz a cintilação com brilho baixo; as cores podem mudar</string>
     <string name="dc_dimming_unavailable">Não é compatível com o kernel atual</string>
+    <string name="screen_off_udfps_title">Impressão digital com a tela desligada</string>
+    <string name="screen_off_udfps_summary">Desbloquear com a impressão digital enquanto a tela estiver desligada</string>
 </resources>

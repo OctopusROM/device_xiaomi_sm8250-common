@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <SwitchPreferenceCompat
+        android:key="screen_off_udfps"
+        android:persistent="false"
+        android:summary="@string/screen_off_udfps_summary"
+        android:title="@string/screen_off_udfps_title" />
+</PreferenceScreen>

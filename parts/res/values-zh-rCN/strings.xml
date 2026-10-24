@@ -15,4 +15,6 @@
     <string name="dc_dimming_title">DC 调光</string>
     <string name="dc_dimming_summary">降低低亮度下的屏幕闪烁；颜色可能发生变化</string>
     <string name="dc_dimming_unavailable">当前内核不支持此功能</string>
+    <string name="screen_off_udfps_title">息屏指纹</string>
+    <string name="screen_off_udfps_summary">屏幕关闭时使用指纹解锁</string>
 </resources>

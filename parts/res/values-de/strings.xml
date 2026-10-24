@@ -15,4 +15,6 @@
     <string name="dc_dimming_title">DC-Dimmen</string>
     <string name="dc_dimming_summary">Verringert Flimmern bei geringer Helligkeit; Farben können sich ändern</string>
     <string name="dc_dimming_unavailable">Vom aktuellen Kernel nicht unterstützt</string>
+    <string name="screen_off_udfps_title">Fingerabdruck bei ausgeschaltetem Bildschirm</string>
+    <string name="screen_off_udfps_summary">Mit dem Fingerabdruck entsperren, wenn der Bildschirm ausgeschaltet ist</string>
 </resources>

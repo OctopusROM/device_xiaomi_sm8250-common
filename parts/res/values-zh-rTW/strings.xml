@@ -15,4 +15,6 @@
     <string name="dc_dimming_title">DC 調光</string>
     <string name="dc_dimming_summary">減少低亮度時的螢幕閃爍；色彩可能發生變化</string>
     <string name="dc_dimming_unavailable">目前的核心不支援此功能</string>
+    <string name="screen_off_udfps_title">螢幕關閉時指紋解鎖</string>
+    <string name="screen_off_udfps_summary">螢幕關閉時使用指紋解鎖</string>
 </resources>

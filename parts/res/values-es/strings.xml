@@ -15,4 +15,6 @@
     <string name="dc_dimming_title">Atenuación DC</string>
     <string name="dc_dimming_summary">Reduce el parpadeo con brillo bajo; los colores pueden cambiar</string>
     <string name="dc_dimming_unavailable">El kernel actual no admite esta función</string>
+    <string name="screen_off_udfps_title">Huella digital con pantalla apagada</string>
+    <string name="screen_off_udfps_summary">Desbloquear con la huella digital cuando la pantalla esté apagada</string>
 </resources>

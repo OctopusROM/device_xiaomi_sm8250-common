@@ -19,6 +19,9 @@
     <string name="dc_dimming_summary">Reduces flicker at low brightness; colors may change</string>
     <string name="dc_dimming_unavailable">Not supported by the current kernel</string>
 
+    <string name="screen_off_udfps_title">Screen-off fingerprint</string>
+    <string name="screen_off_udfps_summary">Unlock with your fingerprint while the screen is off</string>
+
     <!-- Popup camera settings -->
     <string name="popup_screen_effect_title">Camera screen animation</string>
     <string name="popup_screen_effect_summary">Show the MIUI wave animation when the front camera rises and retracts</string>

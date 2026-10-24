@@ -15,4 +15,6 @@
     <string name="dc_dimming_title">Atténuation CC</string>
     <string name="dc_dimming_summary">Réduit le scintillement à faible luminosité ; les couleurs peuvent changer</string>
     <string name="dc_dimming_unavailable">Non pris en charge par le noyau actuel</string>
+    <string name="screen_off_udfps_title">Empreinte digitale écran éteint</string>
+    <string name="screen_off_udfps_summary">Déverrouiller avec l\'empreinte digitale lorsque l\'écran est éteint</string>
 </resources>

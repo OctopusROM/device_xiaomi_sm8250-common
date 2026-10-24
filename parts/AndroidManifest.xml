@@ -27,6 +27,7 @@
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-permission android:name="android.permission.INTERNAL_SYSTEM_WINDOW" />
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
 
     <application
         android:icon="@mipmap/ic_launcher"
@@ -78,6 +79,23 @@
             <meta-data
                 android:name="com.android.settings.summary"
                 android:resource="@string/dc_dimming_summary" />
+        </activity>
+
+        <activity
+            android:name=".display.ScreenOffUdfpsSettingsActivity"
+            android:enabled="@*android:bool/config_screen_off_udfps_enabled"
+            android:exported="true"
+            android:label="@string/screen_off_udfps_title">
+            <intent-filter>
+                <action android:name="com.android.settings.action.IA_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data
+                android:name="com.android.settings.category"
+                android:value="com.android.settings.category.ia.display" />
+            <meta-data
+                android:name="com.android.settings.summary"
+                android:resource="@string/screen_off_udfps_summary" />
         </activity>
 
         <activity
