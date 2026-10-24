@@ -8,6 +8,7 @@
 
 #include "UdfpsHandler.h"
 
+#include <aidl/android/hardware/biometrics/fingerprint/AcquiredInfo.h>
 #include <android-base/logging.h>
 #include <android-base/unique_fd.h>
 #include <fcntl.h>
@@ -15,6 +16,8 @@
 #include <sys/ioctl.h>
 #include <thread>
 #include <unistd.h>
+
+using aidl::android::hardware::biometrics::fingerprint::AcquiredInfo;
 
 #define COMMAND_NIT 10
 #define PARAM_NIT_FOD 1
@@ -117,7 +120,7 @@ class XiaomiKonaUdfpsHandler : public UdfpsHandler {
 
     void onAcquired(int32_t result, int32_t vendorCode) {
         // Goodix reports waiting for authentication as 21 and enrollment as 23.
-        if (result == FINGERPRINT_ACQUIRED_GOOD) {
+        if (result == static_cast<int32_t>(AcquiredInfo::GOOD)) {
             setFodStatus(FOD_STATUS_OFF);
         } else if (vendorCode == 21 || vendorCode == 23) {
             setFodStatus(FOD_STATUS_ON);

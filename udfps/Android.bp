@@ -9,6 +9,7 @@ cc_library {
     vendor: true,
     srcs: ["UdfpsHandler.cpp"],
     shared_libs: [
+        "android.hardware.biometrics.fingerprint-V4-ndk",
         "libbase",
     ],
     header_libs: [
